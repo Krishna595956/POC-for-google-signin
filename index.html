@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Google</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .google-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .google-button img {
+            width: 20px;
+            margin-right: 10px;
+        }
+        .google-button:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Login to Continue</h1>
+        <a href="http://localhost:3000/auth/google" class="google-button">
+            <img src="data:image/jpeg;base64,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" alt="Google Logo">
+            Continue with Google
+        </a>
+    </div>
+
+</body>
+</html>
